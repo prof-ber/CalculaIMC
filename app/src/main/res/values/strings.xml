@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="peso">Weight</string>
+    <string name="hintPeso">Enter weight</string>
+    <string name="altura">Height</string>
+    <string name="hintAltura">Enter height</string>
+    <string name="imc">BMI</string>
+    <string name="calcular">Calculate</string>
+    <string name="limpar">Clear</string>
+</resources>
