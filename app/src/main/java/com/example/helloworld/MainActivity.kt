@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             //Obter o peso e a altura
             val peso = pesoEditText.text.toString().toDouble()
             val altura = alturaEditText.text.toString().toDouble()
-            val imc = calculaIMC(peso, altura)
+            val imc = Calculo().calculaIMC(peso, altura)
             resultadoTextView.text = "$imc"
         }
         limparButton.setOnClickListener {
@@ -56,9 +56,5 @@ class MainActivity : AppCompatActivity() {
             resultadoTextView.text = ""
         }
 
-    }
-    //Calcular o IMC
-    fun calculaIMC(peso: Double, altura: Double): Double {
-        return peso / (altura * altura)
     }
 }
