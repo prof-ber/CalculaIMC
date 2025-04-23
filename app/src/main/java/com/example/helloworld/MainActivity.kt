@@ -28,6 +28,23 @@ class MainActivity : AppCompatActivity() {
         val limparButton = findViewById<Button>(R.id.button2)
         //Adicionar os listeners dos botões
         calcularButton.setOnClickListener {
+            //Disparar um erro em pesoEditText caso ele esteja vazio
+            if (pesoEditText.text.isEmpty() && alturaEditText.text.isEmpty()) {
+                pesoEditText.error = R.string.erroPeso.toString()
+                alturaEditText.error = R.string.erroAltura.toString()
+                return@setOnClickListener
+            }
+            //Disparar um erro em pesoEditText caso ele esteja vazio
+            if (pesoEditText.text.isEmpty()) {
+                pesoEditText.error = R.string.erroPeso.toString()
+                return@setOnClickListener
+            }
+            //Disparar um erro em alturaEditText caso ela esteja vazia
+            if (alturaEditText.text.isEmpty()) {
+                alturaEditText.error = R.string.erroAltura.toString()
+                return@setOnClickListener
+            }
+            //Obter o peso e a altura
             val peso = pesoEditText.text.toString().toDouble()
             val altura = alturaEditText.text.toString().toDouble()
             val imc = calculaIMC(peso, altura)

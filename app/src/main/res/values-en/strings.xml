@@ -8,4 +8,6 @@
     <string name="imc">BMI</string>
     <string name="calcular">Calculate</string>
     <string name="limpar">Clear</string>
+    <string name="erroAltura">Enter height</string>
+    <string name="erroPeso">Enter weight</string>
 </resources>
